@@ -16,6 +16,12 @@ public:
             cnt--;
         }
        } 
-       return ele;
-    }
+       return ele;  // if ques is given that assume there will always be majority element in the array
+
+   **   int cnt1 =0;
+        for(int i=0; i<n; i++){
+            if(nums[i] == ele) cnt1++;
+        }
+        if(cnt1 > (n/2) ) return ele;
+        return -1;  ** only if it is given that it is not sure that if the majority element is present in the array or not 
 };
